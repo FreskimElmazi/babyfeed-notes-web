@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,25 +20,27 @@
         }
 
         .hero {
-            background: linear-gradient(135deg, #6A4C93, #8A70D9, #5B8DEF);
+            background: linear-gradient(135deg, #FDE6E2, #F7D6D8, #EFC7D2);
             padding: 60px 24px 48px;
             text-align: center;
         }
 
-        .hero-emoji {
-            font-size: 56px;
+        .hero-logo {
+            width: 72px;
+            height: 72px;
+            object-fit: contain;
             margin-bottom: 16px;
         }
 
         .hero h1 {
-            color: #fff;
+            color: #7A4A5B;
             font-size: 32px;
             font-weight: 800;
             margin-bottom: 8px;
         }
 
         .hero p {
-            color: rgba(255, 255, 255, 0.8);
+            color: #8E6371;
             font-size: 16px;
             font-weight: 500;
         }
@@ -160,10 +163,11 @@
         }
     </style>
 </head>
+
 <body>
 
     <div class="hero">
-        <div class="hero-emoji">👶</div>
+        <img src="assets/images/icon.png" alt="Baby Feed - Notes logo" class="hero-logo">
         <h1>Privacy Policy</h1>
         <p>Baby Feed - Notes</p>
     </div>
@@ -173,8 +177,9 @@
         <div class="card">
             <h2><span class="icon">🔒</span> Our Commitment to Your Privacy</h2>
             <p>
-                At <span class="app-name">Baby Feed - Notes</span>, your family's privacy is our top priority. 
-                We built this app with a simple principle: <strong>your baby's data belongs to you and only you</strong>.
+                At <span class="app-name">Baby Feed - Notes</span>, your family's privacy is our top priority.
+                We built this app with a simple principle: <strong>your baby's data belongs to you and only
+                    you</strong>.
             </p>
             <div class="highlight-box">
                 <p>We do not collect, store, sell, or share any personal data with third parties. Period.</p>
@@ -194,7 +199,7 @@
                 <li>Advertising identifiers</li>
             </ul>
             <p>
-                All baby tracking data (sleep, feeding, and diaper logs) is stored securely in your 
+                All baby tracking data (sleep, feeding, and diaper logs) is stored securely in your
                 private account and is never accessible to us or any third party.
             </p>
         </div>
@@ -202,12 +207,12 @@
         <div class="card">
             <h2><span class="icon">☁️</span> Data Storage & Security</h2>
             <p>
-                Your data is stored securely using <strong>Google Firebase</strong>, a trusted cloud platform by Google. 
-                Data is encrypted in transit and at rest. Your account is protected by your email and password, 
+                Your data is stored securely using <strong>Google Firebase</strong>, a trusted cloud platform by Google.
+                Data is encrypted in transit and at rest. Your account is protected by your email and password,
                 and we never have access to your password.
             </p>
             <p>
-                If you use the family sharing feature, your baby's data is shared only with the partner 
+                If you use the family sharing feature, your baby's data is shared only with the partner
                 you explicitly invite using a unique invitation code. No one else can access your data.
             </p>
         </div>
@@ -215,19 +220,20 @@
         <div class="card">
             <h2><span class="icon">💳</span> Subscriptions & Payments</h2>
             <p>
-                All payments are processed securely through <strong>Apple's App Store</strong>. We do not have access 
-                to your credit card information, billing address, or any payment details. 
-                We use <strong>RevenueCat</strong> to manage subscription status and sync purchases across 
-                your devices. RevenueCat does not have access to your payment information.
+                All payments are processed securely through <strong>Apple's App Store</strong> (on iOS) or
+                <strong>Google Play Store</strong> (on Android). We do not have access to your credit card information,
+                billing address, or any payment details. We use <strong>RevenueCat</strong> to manage subscription
+                status and sync purchases across your devices. RevenueCat does not have access to your payment
+                information.
             </p>
         </div>
 
         <div class="card">
             <h2><span class="icon">🔔</span> Push Notifications</h2>
             <p>
-                If you enable push notifications, we use <strong>Expo Push Notification Service</strong> to deliver 
-                notifications to your device. This requires a device push token, which is used solely for 
-                delivering notifications you've opted into. You can disable notifications at any time 
+                If you enable push notifications, we use <strong>Expo Push Notification Service</strong> to deliver
+                notifications to your device. This requires a device push token, which is used solely for
+                delivering notifications you've opted into. You can disable notifications at any time
                 from the app settings or your device settings.
             </p>
         </div>
@@ -235,9 +241,9 @@
         <div class="card">
             <h2><span class="icon">🧒</span> Children's Privacy</h2>
             <p>
-                <span class="app-name">Baby Feed - Notes</span> is designed for <strong>parents and caregivers</strong> 
-                to track their baby's daily activities. The app is not intended to be used by children. 
-                We do not knowingly collect any information from children under the age of 13. All data 
+                <span class="app-name">Baby Feed - Notes</span> is designed for <strong>parents and caregivers</strong>
+                to track their baby's daily activities. The app is not intended to be used by children.
+                We do not knowingly collect any information from children under the age of 13. All data
                 entered into the app is provided voluntarily by the parent or caregiver.
             </p>
         </div>
@@ -246,12 +252,16 @@
             <h2><span class="icon">🤝</span> Third-Party Services</h2>
             <p>The app uses the following third-party services, each with their own privacy policies:</p>
             <ul>
-                <li><strong>Google Firebase</strong> — Authentication and secure data storage (<a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Privacy Policy</a>)</li>
-                <li><strong>RevenueCat</strong> — Subscription management (<a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">Privacy Policy</a>)</li>
-                <li><strong>Expo</strong> — Push notification delivery (<a href="https://expo.dev/privacy" target="_blank" rel="noopener">Privacy Policy</a>)</li>
+                <li><strong>Google Firebase</strong> — Authentication and secure data storage (<a
+                        href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Privacy
+                        Policy</a>)</li>
+                <li><strong>RevenueCat</strong> — Subscription management (<a href="https://www.revenuecat.com/privacy"
+                        target="_blank" rel="noopener">Privacy Policy</a>)</li>
+                <li><strong>Expo</strong> — Push notification delivery (<a href="https://expo.dev/privacy"
+                        target="_blank" rel="noopener">Privacy Policy</a>)</li>
             </ul>
             <p>
-                These services are used strictly for app functionality. None are used for advertising, 
+                These services are used strictly for app functionality. None are used for advertising,
                 tracking, or profiling purposes.
             </p>
         </div>
@@ -259,7 +269,7 @@
         <div class="card">
             <h2><span class="icon">📝</span> Changes to This Policy</h2>
             <p>
-                We may update this Privacy Policy from time to time. Any changes will be reflected on this page 
+                We may update this Privacy Policy from time to time. Any changes will be reflected on this page
                 with an updated effective date. We encourage you to review this page periodically.
             </p>
         </div>
@@ -267,7 +277,7 @@
         <div class="card">
             <h2><span class="icon">📬</span> Contact Us</h2>
             <p>
-                If you have any questions or concerns about this Privacy Policy or your data, 
+                If you have any questions or concerns about this Privacy Policy or your data,
                 please don't hesitate to reach out:
             </p>
             <p><strong>Email:</strong> <a href="mailto:support@babyfeed.app">freskim.lp@gmail.com</a></p>
@@ -281,4 +291,5 @@
     </div>
 
 </body>
+
 </html>
