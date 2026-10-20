@@ -161,10 +161,109 @@
                 padding: 24px 20px;
             }
         }
+        .topnav {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: rgba(255, 255, 255, 0.94);
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid #EFE6EA;
+        }
+
+        .topnav-inner {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px 12px;
+            flex-wrap: wrap;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 15px;
+            font-weight: 800;
+            color: #7A4A5B;
+            text-decoration: none;
+        }
+
+        .brand img {
+            width: 28px;
+            height: 28px;
+            object-fit: contain;
+        }
+
+        .navlinks {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+
+        .navlinks a {
+            color: #6A4C93;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 999px;
+        }
+
+        .navlinks a:hover {
+            background: #F0EDF6;
+        }
+
+        .navlinks a.active {
+            background: #8A70D9;
+            color: #fff;
+        }
+
+        .footer-links a {
+            margin: 0 4px;
+        }
+
+        @media (max-width: 600px) {
+            .topnav-inner {
+                justify-content: center;
+            }
+
+            .brand {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .navlinks {
+                justify-content: center;
+            }
+
+            .navlinks {
+                gap: 2px;
+            }
+
+            .navlinks a {
+                padding: 6px 8px;
+                font-size: 13px;
+            }
+        }
     </style>
 </head>
 
 <body>
+
+    <nav class="topnav" aria-label="Site">
+        <div class="topnav-inner">
+            <a class="brand" href="index.html"><img src="assets/images/icon.png" alt=""> Baby Feed - Notes</a>
+            <div class="navlinks">
+            <a href="index.html" class="active" aria-current="page">Privacy Policy</a>
+            <a href="terms.html">Terms of Use</a>
+            <a href="delete-account.html">Delete Account</a>
+            </div>
+        </div>
+    </nav>
 
     <div class="hero">
         <img src="assets/images/icon.png" alt="Baby Feed - Notes logo" class="hero-logo">
@@ -306,6 +405,7 @@
     </div>
 
     <div class="footer">
+        <p class="footer-links"><a href="index.html">Privacy Policy</a> &middot; <a href="terms.html">Terms of Use</a> &middot; <a href="delete-account.html">Delete Account</a> &middot; <a href="mailto:support@babyfeednotes.com">Contact</a></p>
         <p><strong>Effective Date:</strong> September 22, 2026</p>
         <p style="margin-top: 8px;">&copy; 2026 Baby Feed - Notes. All rights reserved.</p>
     </div>

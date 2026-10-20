@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join your family — Baby Feed - Notes</title>
+    <meta name="robots" content="noindex">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #F5F5F5;
+            color: #333;
+            line-height: 1.7;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #FDE6E2, #F7D6D8, #EFC7D2);
+            padding: 60px 24px 48px;
+            text-align: center;
+        }
+
+        .hero-logo {
+            width: 72px;
+            height: 72px;
+            object-fit: contain;
+            margin-bottom: 16px;
+        }
+
+        .hero h1 {
+            color: #7A4A5B;
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .hero p {
+            color: #8E6371;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: -24px auto 0;
+            padding: 0 20px 60px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 32px 28px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        .card h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #6A4C93;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card h2 .icon {
+            font-size: 22px;
+        }
+
+        .card p {
+            color: #555;
+            font-size: 15px;
+            margin-bottom: 12px;
+        }
+
+        .card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .card ul {
+            color: #555;
+            font-size: 15px;
+            padding-left: 20px;
+            margin-bottom: 12px;
+        }
+
+        .card ul li {
+            margin-bottom: 6px;
+        }
+
+        .card ul li:last-child {
+            margin-bottom: 0;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #F0EDF6, #E8E0F4);
+            border-left: 4px solid #8A70D9;
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin: 16px 0;
+        }
+
+        .highlight-box p {
+            color: #6A4C93;
+            font-weight: 600;
+            margin-bottom: 0;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #E8F5E9;
+            color: #2E7D32;
+            font-size: 13px;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 32px 24px;
+            color: #999;
+            font-size: 13px;
+        }
+
+        .footer a {
+            color: #8A70D9;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .app-name {
+            font-weight: 700;
+            color: #6A4C93;
+        }
+
+        strong {
+            color: #444;
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                padding: 48px 20px 40px;
+            }
+
+            .hero h1 {
+                font-size: 26px;
+            }
+
+            .card {
+                padding: 24px 20px;
+            }
+        }
+        .topnav {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: rgba(255, 255, 255, 0.94);
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid #EFE6EA;
+        }
+
+        .topnav-inner {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px 12px;
+            flex-wrap: wrap;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 15px;
+            font-weight: 800;
+            color: #7A4A5B;
+            text-decoration: none;
+        }
+
+        .brand img {
+            width: 28px;
+            height: 28px;
+            object-fit: contain;
+        }
+
+        .navlinks {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+
+        .navlinks a {
+            color: #6A4C93;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 999px;
+        }
+
+        .navlinks a:hover {
+            background: #F0EDF6;
+        }
+
+        .navlinks a.active {
+            background: #8A70D9;
+            color: #fff;
+        }
+
+        .footer-links a {
+            margin: 0 4px;
+        }
+
+        @media (max-width: 600px) {
+            .topnav-inner {
+                justify-content: center;
+            }
+
+            .brand {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .navlinks {
+                justify-content: center;
+            }
+
+            .navlinks {
+                gap: 2px;
+            }
+
+            .navlinks a {
+                padding: 6px 8px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="topnav" aria-label="Site">
+        <div class="topnav-inner">
+            <a class="brand" href="index.html"><img src="assets/images/icon.png" alt=""> Baby Feed - Notes</a>
+            <div class="navlinks">
+            <a href="index.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Use</a>
+            <a href="delete-account.html">Delete Account</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <img src="assets/images/icon.png" alt="Baby Feed - Notes logo" class="hero-logo">
+        <h1>You're invited!</h1>
+        <p>Track your baby together in Baby Feed - Notes</p>
+    </div>
+
+    <div class="container">
+
+        <div class="card" style="text-align: center;">
+            <h2 style="justify-content: center;"><span class="icon">👶</span> Already have the app?</h2>
+            <p><a id="open-app" href="#" style="display: inline-block; margin-top: 8px; padding: 14px 28px;
+                border-radius: 12px; background: #8A70D9; color: #fff; font-weight: 600;
+                text-decoration: none;">Open Baby Feed &amp; join</a></p>
+        </div>
+
+        <div class="card" style="text-align: center;">
+            <h2 style="justify-content: center;"><span class="icon">📲</span> New here?</h2>
+            <p>1. Install the app and create your account.</p>
+            <p>2. Come back and tap <strong>Open Baby Feed &amp; join</strong> — or enter this code in
+                <em>Settings → Join Family</em>:</p>
+            <p id="code" style="font-size: 32px; font-weight: 700; letter-spacing: 6px; color: #6A4C93;
+                margin: 12px 0;">——————</p>
+            <p>
+                <a href="https://apps.apple.com/app/id6756895940">App Store</a>
+                &nbsp;·&nbsp;
+                <a href="https://play.google.com/store/apps/details?id=com.freskimelmazi.babyschedule">Google Play</a>
+            </p>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p class="footer-links"><a href="index.html">Privacy Policy</a> &middot; <a href="terms.html">Terms of Use</a> &middot; <a href="delete-account.html">Delete Account</a> &middot; <a href="mailto:support@babyfeednotes.com">Contact</a></p>
+    </div>
+
+    <script>
+        // Only ever put a well-formed code into the page or the app link.
+        var raw = new URLSearchParams(location.search).get("code") || "";
+        var code = /^[A-Za-z0-9]{6}$/.test(raw) ? raw.toUpperCase() : "";
+        var appLink = "babyfeednotes://join?code=" + code;
+        var button = document.getElementById("open-app");
+        if (code) {
+            document.getElementById("code").textContent = code;
+            button.href = appLink;
+            // Try once automatically; the button stays as the fallback.
+            setTimeout(function () { location.href = appLink; }, 300);
+        } else {
+            document.getElementById("code").textContent = "Ask for a new link";
+            button.style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>
